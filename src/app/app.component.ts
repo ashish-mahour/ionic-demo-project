@@ -1,6 +1,6 @@
 import { Component, NgZone } from "@angular/core";
 import moment from 'moment';
-import jwt from '';
+import jwt from 'jsonwebtoken';
 
 @Component({
   selector: "my-app",
