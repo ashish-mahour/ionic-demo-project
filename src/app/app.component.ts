@@ -29,7 +29,5 @@ export class AppComponent {
     let prevValue = this.checked[index]
     this.checked = []
     this.checked[index] = !prevValue;
-
-    console.log(this.checked);
   }
 }
