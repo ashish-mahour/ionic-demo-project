@@ -1,5 +1,4 @@
 import { Component, NgZone } from "@angular/core";
-import { IonToggle } from "@ionic/angular";
 import moment from 'moment'
 
 @Component({
@@ -26,7 +25,7 @@ export class AppComponent {
     }, 1000)
   }
 
-  change(event, toggle: IonToggle, index: number) {
+  changeToggle(index: number) {
     let prevValue = this.checked[index]
     this.checked = []
     this.checked[index] = !prevValue;

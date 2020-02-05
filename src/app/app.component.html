@@ -1,29 +1,22 @@
-<ion-content>
-	<ion-grid>
-		<ion-row>
-			<ion-col size=2>
-				Col1
-			</ion-col>
-			<ion-col>
-				Col2
-			</ion-col>
-			<ion-col>
-				{{timerValue}}
-			</ion-col>
-		</ion-row>
-	</ion-grid>
-</ion-content>
-<ion-footer>
-	<ion-toolbar color="light">
-		<ion-tab-bar>
-			<ion-tab-button fill="clear" class="button-bar">
-				<ion-icon color="dark" name="md-person-add" class="button-bar-icon"></ion-icon>
-				<ion-label color="dark">Manage </ion-label>
-			</ion-tab-button>
-			<ion-tab-button fill="clear" class="button-bar">
-				<ion-icon color="dark" name="md-person-add" class="button-bar-icon"></ion-icon>
-				<ion-label color="dark">Do </ion-label>
-			</ion-tab-button>
-		</ion-tab-bar>
-	</ion-toolbar>
-</ion-footer>
+<ion-app>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+				<ion-toggle [checked]="checked[0]" (ionChange)="changeToggle(0)"></ion-toggle>
+				</ion-col>
+				<ion-col>
+				<ion-toggle [checked]="checked[1]" (ionChange)="changeToggle(1)"></ion-toggle>
+				</ion-col>
+        <ion-col>
+				<ion-toggle [checked]="checked[2]" (ionChange)="changeToggle(2)"></ion-toggle>
+				</ion-col>
+        <ion-col>
+				<ion-toggle [checked]="checked[3]" (ionChange)="changeToggle(3)"></ion-toggle>
+				</ion-col>
+				<ion-col>
+					{{timerValue}}
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		
+</ion-app>
