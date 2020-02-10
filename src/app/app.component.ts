@@ -12,13 +12,12 @@ enum TYPE {
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  name: TYPE;
+  name = TYPE;
   timerValue: string = ""
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
     // this.timerByLocale()
-    this.name = TYPE.DATA
   }
 
   timerByLocale(){
