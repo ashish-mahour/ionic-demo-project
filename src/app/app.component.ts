@@ -2,18 +2,23 @@ import { Component, NgZone } from "@angular/core";
 import moment from 'moment';
 // import jwt from 'jsonwebtoken';
 
+enum TYPE {
+  DATA = "DATA"
+}
+
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  name = "Angular";
+  name: TYPE;
   timerValue: string = ""
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
     // this.timerByLocale()
+    this.name = TYPE.DATA
   }
 
   timerByLocale(){
