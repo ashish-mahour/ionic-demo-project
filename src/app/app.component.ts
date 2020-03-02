@@ -29,7 +29,7 @@ export class AppComponent {
     const start = new Date("11/30/2018"),
     end = new Date("09/30/2019");
     let arr = []
-    while(start <= end){
+    while(start != end){
       arr.push(start)
       start.setDate(start.getDate() + 1)
     } 
