@@ -17,6 +17,7 @@ export class AppComponent {
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
+    // Time and Days diffrence between two days
     // let endDate = new Date(new Date().toDateString() + " 17:00:00");
     // console.log(endDate.toLocaleTimeString());
     // const date1 = new Date("7/13/2020 12:00 AM");
@@ -26,15 +27,16 @@ export class AppComponent {
     // console.log(diffDays);
     // console.log(diffTime / (1000 * 60 * 60));
 
-    let startDate = new Date("09/10/2019");
-    let endDate = new Date("09/30/2019");
-    let arr = [];
-    while (startDate <= endDate) {
-      console.log(startDate.getDate())
-      arr.push(new Date(startDate));
-      startDate.setDate(startDate.getDate() + 1);
-    }
-    console.log(arr);
+    // Dates between range
+    // let startDate = new Date("09/10/2019");
+    // let endDate = new Date("09/30/2019");
+    // let arr = [];
+    // while (startDate <= endDate) {
+    //   console.log(startDate.getDate())
+    //   arr.push(new Date(startDate));
+    //   startDate.setDate(startDate.getDate() + 1);
+    // }
+    // console.log(arr);
     // this.timerByLocale()
   }
 
