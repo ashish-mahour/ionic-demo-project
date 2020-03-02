@@ -17,23 +17,24 @@ export class AppComponent {
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
-    let endDate = new Date(new Date().toDateString() + " 17:00:00");
-    console.log(endDate.toLocaleTimeString());
-    const date1 = new Date("7/13/2020 12:00 AM");
-    const date2 = new Date("7/13/2020 4:30 AM");
-    const diffTime = Math.abs(date2.valueOf() - date1.valueOf());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    console.log(diffDays);
-    console.log(diffTime / (1000 * 60 * 60));
+    // let endDate = new Date(new Date().toDateString() + " 17:00:00");
+    // console.log(endDate.toLocaleTimeString());
+    // const date1 = new Date("7/13/2020 12:00 AM");
+    // const date2 = new Date("7/13/2020 4:30 AM");
+    // const diffTime = Math.abs(date2.valueOf() - date1.valueOf());
+    // const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    // console.log(diffDays);
+    // console.log(diffTime / (1000 * 60 * 60));
 
-    let start = new Date("09/10/2019"),
-    end = new Date("09/30/2019");
-    let arr = []
-    while(start <= end){
-      arr.push(start)
-      start.setDate(start.getDate() + 1)
-    } 
-    console.log(arr)
+    let startDate = new Date("09/10/2019");
+    let endDate = new Date("09/30/2019");
+    let arr = [];
+    while (startDate <= endDate) {
+      console.log(startDate.getDate())
+      arr.push(new Date(startDate));
+      startDate.setDate(startDate.getDate() + 1);
+    }
+    console.log(arr);
     // this.timerByLocale()
   }
 
