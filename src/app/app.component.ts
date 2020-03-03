@@ -17,8 +17,8 @@ export class AppComponent {
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
-    console.log(new Date().toUTCString())
-    console.log(new Date("2020-03-25 15:00:00").toLocaleString("da-DK",{timeZone: "Asia/Kolkata"}))
+    // console.log(new Date().toUTCString())
+    // console.log(new Date("2020-03-25 15:00:00").toLocaleString("da-DK",{timeZone: "Asia/Kolkata"}))
     // Time and Days diffrence between two days
     // let endDate = new Date(new Date().toDateString() + " 17:00:00");
     // console.log(endDate.toLocaleTimeString());
