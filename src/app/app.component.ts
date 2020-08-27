@@ -22,7 +22,7 @@ export class AppComponent {
     const str = "{!product_type!:!Services!,!product_id!:23,!buyer_user_id!:2,!start_datetime!:!2020-07-31T06:30:00.000Z!,!amount!:150000,!ipaddress!:!!,!qruuid!:!f642f9600f4842dd9ff002b8ff80b839!,!tracking_url!:null,!meeting_url!:null,!duration!:180,!timestamp!:!2020-07-30T13:50:51.967Z!,!transaction_model!:!Sell!,!rent_end_date!:null,!rent_start_date!:null}"
     console.log(str.replace(/!/g, "\""))
     console.log(TYPE.DATA.toString())
-    console.log("2000.00".match(/[A-Za-z]/g))
+    console.log("200.0".match(/[^0-9.]/g))
     // console.log(new Date().toUTCString())
     // console.log(new Date("2020-03-25 15:00:00").toLocaleString("da-DK",{timeZone: "Asia/Kolkata"}))
     // Time and Days diffrence between two days
