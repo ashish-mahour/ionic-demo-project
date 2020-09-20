@@ -17,12 +17,13 @@ export class AppComponent {
   checked: boolean[] = [];
 
   constructor(private zone: NgZone) {
-    console.log(Math.floor(222 / 60))
-    console.log(222 % 60)
-    const str = "{!product_type!:!Services!,!product_id!:23,!buyer_user_id!:2,!start_datetime!:!2020-07-31T06:30:00.000Z!,!amount!:150000,!ipaddress!:!!,!qruuid!:!f642f9600f4842dd9ff002b8ff80b839!,!tracking_url!:null,!meeting_url!:null,!duration!:180,!timestamp!:!2020-07-30T13:50:51.967Z!,!transaction_model!:!Sell!,!rent_end_date!:null,!rent_start_date!:null}"
-    console.log(str.replace(/!/g, "\""))
-    console.log(TYPE.DATA.toString())
-    console.log("200.0".match(/[^0-9.]/g))
+    console.log(Math.floor(222 / 60));
+    console.log(222 % 60);
+    const str =
+      "{!product_type!:!Services!,!product_id!:23,!buyer_user_id!:2,!start_datetime!:!2020-07-31T06:30:00.000Z!,!amount!:150000,!ipaddress!:!!,!qruuid!:!f642f9600f4842dd9ff002b8ff80b839!,!tracking_url!:null,!meeting_url!:null,!duration!:180,!timestamp!:!2020-07-30T13:50:51.967Z!,!transaction_model!:!Sell!,!rent_end_date!:null,!rent_start_date!:null}";
+    console.log(str.replace(/!/g, '"'));
+    console.log(TYPE.DATA.toString());
+    console.log("200.0".match(/[^0-9.]/g));
     // console.log(new Date().toUTCString())
     // console.log(new Date("2020-03-25 15:00:00").toLocaleString("da-DK",{timeZone: "Asia/Kolkata"}))
     // Time and Days diffrence between two days
@@ -46,6 +47,62 @@ export class AppComponent {
     // }
     // console.log(arr);
     // this.timerByLocale()
+    this.test();
+  }
+
+  test() {
+    const customers = [
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Alpha",
+      "Beta",
+      "Omega"
+    ];
+    if (customers.length === 0) {
+      return;
+    }
+    customers.sort();
+    let cursor = customers[0];
+    let temp = 1;
+    let occurance = [];
+    let result = [];
+    for (let i = 1; i < customers.length; i++) {
+      if (customers[i] === cursor) {
+        if (i === customers.length - 1) {
+          occurance.push({
+            item: cursor,
+            count: (temp / customers.length) * 100
+          });
+        } else {
+          temp++;
+        }
+      } else {
+        occurance.push({
+          item: cursor,
+          count: (temp / customers.length) * 100
+        });
+        cursor = customers[i];
+        temp = 1;
+        if (i === customers.length - 1) {
+          occurance.push({
+            item: cursor,
+            count: (temp / customers.length) * 100
+          });
+        } 
+      }
+    }
+    occurance.forEach(x => {
+      if (x.count >= 5) {
+        result.push(x.item);
+      }
+    });
+    console.log(result);
   }
 
   timerByLocale() {
