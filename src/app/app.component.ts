@@ -47,7 +47,7 @@ export class AppComponent {
     // }
     // console.log(arr);
     // this.timerByLocale()
-    this.test();
+    this.test2();
   }
 
   test() {
@@ -103,6 +103,29 @@ export class AppComponent {
       }
     });
     console.log(result);
+  }
+
+  test2() {
+    const s = "shjdjsdjadassn"
+    const k = 6
+    let result = "Not found!"
+    let count = 0
+    for (let i = 0; i < s.length; i++) {
+        const str = s.substr(i, k)
+        if(str.length !== k) {
+          continue;
+        }
+        const strLen = str.match(/[aeiou]/gi) ? str.match(/[aeiou]/gi).length : 0
+        if(k === strLen) {
+          count = strLen
+          result = str
+          break
+        } else if (count < strLen) {
+          count = strLen
+          result = str
+        }
+    }
+    console.log(result)
   }
 
   timerByLocale() {
