@@ -1,5 +1,5 @@
 import { Component, NgZone } from "@angular/core";
-import moment from "moment";
+import moment from "moment-timezone";
 // import jwt from 'jsonwebtoken';
 
 enum TYPE {
@@ -48,7 +48,7 @@ export class AppComponent {
     // console.log(arr);
     // this.timerByLocale()
     // this.test2();
-    console.log(new Date(new Date("2020-11-10 06:30:00").toString() + "UTC"))
+    console.log(moment.utc("2020-11-22 06:30:00").toDate());
   }
 
   test() {
