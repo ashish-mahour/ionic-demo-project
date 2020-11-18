@@ -48,6 +48,7 @@ export class AppComponent {
     // console.log(arr);
     // this.timerByLocale()
     // this.test2();
+    console.log(new Date(new Date("2020-11-10 06:30:00").toString() + "UTC"))
   }
 
   test() {
