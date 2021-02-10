@@ -15,6 +15,7 @@ export class AppComponent {
   name = TYPE;
   timerValue: string = "";
   checked: boolean[] = [];
+  radioSelect: string = null;
 
   constructor(private zone: NgZone) {
     console.log(Math.floor(222 / 60));
@@ -147,5 +148,9 @@ export class AppComponent {
     let prevValue = this.checked[index];
     this.checked = [];
     this.checked[index] = !prevValue;
+  }
+
+  getRadioValue(value: any) {
+    console.log(value, this.radioSelect);
   }
 }
