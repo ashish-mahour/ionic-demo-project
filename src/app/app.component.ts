@@ -1,30 +1,30 @@
-import { Component, NgZone } from "@angular/core";
-import moment from "moment-timezone";
+import { Component, NgZone } from '@angular/core';
 // import jwt from 'jsonwebtoken';
 
 enum TYPE {
-  DATA = "Data1"
+  DATA = 'Data1'
 }
 
 @Component({
-  selector: "my-app",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   name = TYPE;
-  timerValue: string = "";
+  timerValue: string = '';
   checked: boolean[] = [];
   radioSelect: string = null;
 
   constructor(private zone: NgZone) {
-    console.log(Math.floor(222 / 60));
-    console.log(222 % 60);
-    const str =
-      "{!product_type!:!Services!,!product_id!:23,!buyer_user_id!:2,!start_datetime!:!2020-07-31T06:30:00.000Z!,!amount!:150000,!ipaddress!:!!,!qruuid!:!f642f9600f4842dd9ff002b8ff80b839!,!tracking_url!:null,!meeting_url!:null,!duration!:180,!timestamp!:!2020-07-30T13:50:51.967Z!,!transaction_model!:!Sell!,!rent_end_date!:null,!rent_start_date!:null}";
-    console.log(str.replace(/!/g, '"'));
-    console.log(TYPE.DATA.toString());
-    console.log("2000S&&".match(/[^0-9]/g));
+    // console.log(Math.floor(222 / 60));
+    // console.log(222 % 60);
+    // const str =
+    //   "{!product_type!:!Services!,!product_id!:23,!buyer_user_id!:2,!start_datetime!:!2020-07-31T06:30:00.000Z!,!amount!:150000,!ipaddress!:!!,!qruuid!:!f642f9600f4842dd9ff002b8ff80b839!,!tracking_url!:null,!meeting_url!:null,!duration!:180,!timestamp!:!2020-07-30T13:50:51.967Z!,!transaction_model!:!Sell!,!rent_end_date!:null,!rent_start_date!:null}";
+    // console.log(str.replace(/!/g, '"'));
+    // console.log(TYPE.DATA.toString());
+    // console.log("2000S&&".match(/[^0-9]/g));
+    console.log('admin'.match('^admin*'));
     // console.log(new Date().toUTCString())
     // console.log(new Date("2020-03-25 15:00:00").toLocaleString("da-DK",{timeZone: "Asia/Kolkata"}))
     // Time and Days diffrence between two days
@@ -49,22 +49,22 @@ export class AppComponent {
     // console.log(arr);
     // this.timerByLocale()
     // this.test2();
-    console.log(moment.utc("2020-11-22 06:30:00").toDate());
+    // console.log(moment.utc('2020-11-22 06:30:00').toDate());
   }
 
   test() {
     const customers = [
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Alpha",
-      "Beta",
-      "Omega"
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Alpha',
+      'Beta',
+      'Omega'
     ];
     if (customers.length === 0) {
       return;
@@ -108,9 +108,9 @@ export class AppComponent {
   }
 
   test2() {
-    const s = "shjdjsdjadassn";
+    const s = 'shjdjsdjadassn';
     const k = 6;
-    let result = "Not found!";
+    let result = 'Not found!';
     let count = 0;
     for (let i = 0; i < s.length; i++) {
       const str = s.substr(i, k);
@@ -137,9 +137,9 @@ export class AppComponent {
       let date = moment
         .utc(+moment.duration(moment.utc().diff(startTime)))
         .toDate();
-      this.timerValue = date.toLocaleTimeString("en", {
-        minute: "numeric",
-        second: "numeric"
+      this.timerValue = date.toLocaleTimeString('en', {
+        minute: 'numeric',
+        second: 'numeric'
       });
     }, 1000);
   }
